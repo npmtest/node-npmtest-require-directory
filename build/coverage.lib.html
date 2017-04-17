@@ -1,5 +1,7 @@
-<html lang="en"><head>
-    <title>Code coverage report for node-npmtest-require-directory/require-directory/index.js</title>
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for node-npmtest-require-directory/node_modules/require-directory/index.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -192,7 +194,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-require-directory">npmtest-require-directory (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-require-directory/require-directory/index.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-require-directory/node_modules/require-directory/index.js</span></h1>
     <h2>
         
         Statements: <span class="metric">17.86% <small>(5 / 28)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -208,11 +210,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> » <a href="index.html">node-npmtest-require-directory/require-directory/</a> » index.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-require-directory/node_modules/require-directory/</a> &#187; index.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tbody><tr><td class="line-count">1
+<tr><td class="line-count">1
 2
 3
 4
@@ -395,16 +397,16 @@ var fs = require('fs'),
   defaultOptions = {
     extensions: ['js', 'json', 'coffee'],
     recurse: true,
-    rename: <span class="fstat-no" title="function not covered">function (name) {</span>
-<span class="cstat-no" title="statement not covered">      return name;</span>
+    rename: <span class="fstat-no" title="function not covered" >function (name) {</span>
+<span class="cstat-no" title="statement not covered" >      return name;</span>
     },
-    visit: <span class="fstat-no" title="function not covered">function (obj) {</span>
-<span class="cstat-no" title="statement not covered">      return obj;</span>
+    visit: <span class="fstat-no" title="function not covered" >function (obj) {</span>
+<span class="cstat-no" title="statement not covered" >      return obj;</span>
     }
   };
 &nbsp;
-<span class="fstat-no" title="function not covered">function checkFileInclusion(path, filename, options) {</span>
-<span class="cstat-no" title="statement not covered">  return (</span>
+<span class="fstat-no" title="function not covered" >function checkFileInclusion(path, filename, options) {</span>
+<span class="cstat-no" title="statement not covered" >  return (</span>
     // verify file has valid extension
     (new RegExp('\\.(' + options.extensions.join('|') + ')$', 'i').test(filename)) &amp;&amp;
 &nbsp;
@@ -422,63 +424,62 @@ var fs = require('fs'),
   );
 }
 &nbsp;
-<span class="fstat-no" title="function not covered">function requireDirectory(m, path, options) {</span>
-<span class="cstat-no" title="statement not covered">  var retval = {};</span>
+<span class="fstat-no" title="function not covered" >function requireDirectory(m, path, options) {</span>
+<span class="cstat-no" title="statement not covered" >  var retval = {};</span>
 &nbsp;
   // path is optional
-<span class="cstat-no" title="statement not covered">  if (path &amp;&amp; !options &amp;&amp; typeof path !== 'string') {</span>
-<span class="cstat-no" title="statement not covered">    options = path;</span>
-<span class="cstat-no" title="statement not covered">    path = null;</span>
+<span class="cstat-no" title="statement not covered" >  if (path &amp;&amp; !options &amp;&amp; typeof path !== 'string') {</span>
+<span class="cstat-no" title="statement not covered" >    options = path;</span>
+<span class="cstat-no" title="statement not covered" >    path = null;</span>
   }
 &nbsp;
   // default options
-<span class="cstat-no" title="statement not covered">  options = options || {};</span>
-<span class="cstat-no" title="statement not covered">  for (var prop in defaultOptions) {</span>
-<span class="cstat-no" title="statement not covered">    if (typeof options[prop] === 'undefined') {</span>
-<span class="cstat-no" title="statement not covered">      options[prop] = defaultOptions[prop];</span>
+<span class="cstat-no" title="statement not covered" >  options = options || {};</span>
+<span class="cstat-no" title="statement not covered" >  for (var prop in defaultOptions) {</span>
+<span class="cstat-no" title="statement not covered" >    if (typeof options[prop] === 'undefined') {</span>
+<span class="cstat-no" title="statement not covered" >      options[prop] = defaultOptions[prop];</span>
     }
   }
 &nbsp;
   // if no path was passed in, assume the equivelant of __dirname from caller
   // otherwise, resolve path relative to the equivalent of __dirname
-<span class="cstat-no" title="statement not covered">  path = !path ? dirname(m.filename) : resolve(dirname(m.filename), path);</span>
+<span class="cstat-no" title="statement not covered" >  path = !path ? dirname(m.filename) : resolve(dirname(m.filename), path);</span>
 &nbsp;
   // get the path of each file in specified directory, append to current tree node, recurse
-<span class="cstat-no" title="statement not covered">  fs.readdirSync(path).forEach(<span class="fstat-no" title="function not covered">function (filename) {</span></span>
-<span class="cstat-no" title="statement not covered">    var joined = join(path, filename),</span>
+<span class="cstat-no" title="statement not covered" >  fs.readdirSync(path).forEach(<span class="fstat-no" title="function not covered" >function (filename) {</span></span>
+<span class="cstat-no" title="statement not covered" >    var joined = join(path, filename),</span>
       files,
       key,
       obj;
 &nbsp;
-<span class="cstat-no" title="statement not covered">    if (fs.statSync(joined).isDirectory() &amp;&amp; options.recurse) {</span>
+<span class="cstat-no" title="statement not covered" >    if (fs.statSync(joined).isDirectory() &amp;&amp; options.recurse) {</span>
       // this node is a directory; recurse
-<span class="cstat-no" title="statement not covered">      files = requireDirectory(m, joined, options);</span>
+<span class="cstat-no" title="statement not covered" >      files = requireDirectory(m, joined, options);</span>
       // exclude empty directories
-<span class="cstat-no" title="statement not covered">      if (Object.keys(files).length) {</span>
-<span class="cstat-no" title="statement not covered">        retval[options.rename(filename, joined, filename)] = files;</span>
+<span class="cstat-no" title="statement not covered" >      if (Object.keys(files).length) {</span>
+<span class="cstat-no" title="statement not covered" >        retval[options.rename(filename, joined, filename)] = files;</span>
       }
     } else {
-<span class="cstat-no" title="statement not covered">      if (joined !== m.filename &amp;&amp; checkFileInclusion(joined, filename, options)) {</span>
+<span class="cstat-no" title="statement not covered" >      if (joined !== m.filename &amp;&amp; checkFileInclusion(joined, filename, options)) {</span>
         // hash node key shouldn't include file extension
-<span class="cstat-no" title="statement not covered">        key = filename.substring(0, filename.lastIndexOf('.'));</span>
-<span class="cstat-no" title="statement not covered">        obj = m.require(joined);</span>
-<span class="cstat-no" title="statement not covered">        retval[options.rename(key, joined, filename)] = options.visit(obj, joined, filename) || obj;</span>
+<span class="cstat-no" title="statement not covered" >        key = filename.substring(0, filename.lastIndexOf('.'));</span>
+<span class="cstat-no" title="statement not covered" >        obj = m.require(joined);</span>
+<span class="cstat-no" title="statement not covered" >        retval[options.rename(key, joined, filename)] = options.visit(obj, joined, filename) || obj;</span>
       }
     }
   });
 &nbsp;
-<span class="cstat-no" title="statement not covered">  return retval;</span>
+<span class="cstat-no" title="statement not covered" >  return retval;</span>
 }
 &nbsp;
 module.exports = requireDirectory;
 module.exports.defaults = defaultOptions;
 &nbsp;
 &nbsp;</pre></td></tr>
-</tbody></table></pre>
+</table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 21:10:48 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Mon Apr 17 2017 16:09:47 GMT+0000 (UTC)</div>
 </div>
-
-
-</body></html>
+</body>
+</html>

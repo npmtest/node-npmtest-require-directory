@@ -1,4 +1,7 @@
-# test coverage for  [require-directory (v2.1.1)](https://github.com/troygoode/node-require-directory/)  [![npm package](https://img.shields.io/npm/v/npmtest-require-directory.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-require-directory) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-require-directory.svg)](https://travis-ci.org/npmtest/node-npmtest-require-directory)
+# npmtest-require-directory
+
+#### basic test coverage for  [require-directory (v2.1.1)](https://github.com/troygoode/node-require-directory/)  [![npm package](https://img.shields.io/npm/v/npmtest-require-directory.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-require-directory) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-require-directory.svg)](https://travis-ci.org/npmtest/node-npmtest-require-directory)
+
 #### Recursively iterates over specified directory, require()'ing each file, and returning a nested hash structure containing those modules.
 
 [![NPM](https://nodei.co/npm/require-directory.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/require-directory)
